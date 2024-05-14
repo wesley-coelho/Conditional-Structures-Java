@@ -76,51 +76,40 @@ public class Program {
 //		Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A
 //		seguir, calcule e mostre o valor da conta a pagar.
 		
-		System.out.println("Código\t\tEspecificação\t\tPreço");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.println("1\t\tCachorro quente\t\tR$ 4.00");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.println("2\t\tX-Salada\t\tR$ 4.50");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.println("3\t\tX-Bacon\t\t\tR$ 5.00");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.println("4\t\tTorrada simples\t\tR$ 2.00");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.println("5\t\tRefrigerante\t\tR$ 1.50");
-		System.out.println("----------|------------------------|----------------|");
-		System.out.print("\nDigite o código e a quantidade do produto que deseja? ");
-		int codigo = scan.nextInt();
-		int quantidade = scan.nextInt();
-		double total = 0;
-		switch(codigo) {
-			case 1: 
-				total = quantidade * 4.00;
-				break;
-			case 2:
-				total = quantidade * 4.50;
-				break;
-			case 3:
-				total = quantidade * 5.00;
-				break;
-			case 4: 
-				total = quantidade * 2.00;
-				break;
-			case 5:
-				total = quantidade * 1.50;
-				break;
-		}
-		System.out.println("\nTotal: R$ "+ String.format("%.2f", total));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+//		System.out.println("Código\t\tEspecificação\t\tPreço");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.println("1\t\tCachorro quente\t\tR$ 4.00");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.println("2\t\tX-Salada\t\tR$ 4.50");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.println("3\t\tX-Bacon\t\t\tR$ 5.00");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.println("4\t\tTorrada simples\t\tR$ 2.00");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.println("5\t\tRefrigerante\t\tR$ 1.50");
+//		System.out.println("----------|------------------------|----------------|");
+//		System.out.print("\nDigite o código e a quantidade do produto que deseja? ");
+//		int codigo = scan.nextInt();
+//		int quantidade = scan.nextInt();
+//		double total = 0;
+//		switch(codigo) {
+//			case 1: 
+//				total = quantidade * 4.00;
+//				break;
+//			case 2:
+//				total = quantidade * 4.50;
+//				break;
+//			case 3:
+//				total = quantidade * 5.00;
+//				break;
+//			case 4: 
+//				total = quantidade * 2.00;
+//				break;
+//			case 5:
+//				total = quantidade * 1.50;
+//				break;
+//		}
+//		System.out.println("\nTotal: R$ "+ String.format("%.2f", total));
 		
 //		Exercício 6***********************************************************************************************
 //		Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
