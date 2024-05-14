@@ -5,8 +5,10 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Scanner scan = new Scanner(System.in);
+		
 		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+		
 		
 //		Exercicio 1************************************************************************************************
 //		Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
@@ -131,7 +133,93 @@ public class Program {
 //			System.out.print("Fora de intervalo");
 //		}
 		
+//		Exercício 7
+//		Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas
+//		de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o
+//		ponto, ou se está sobre um dos eixos cartesianos ou na origem (x = y = 0).
+//		Se o ponto estiver na origem, escreva a mensagem “Origem”.
+//		Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a
+//		situação.		
 		
+//		System.out.print("Digite X e y: ");	
+//		double x = scan.nextDouble();
+//		double y = scan.nextDouble();
+//		
+//		if ( x == 0.0 && y == 0.0 ) {
+//			System.out.println("Origem");
+//		}
+//		else if ( y == 0.0 ) {
+//			System.out.println("Eixo X");
+//		}
+//		else if ( x == 0.0 ) {
+//			System.out.println("Eixo Y");
+//		}
+//		else if( x > 0.0 && y > 0.0) {
+//			System.out.println("Q1");
+//		}
+//		else if ( x < 0.0 && y > 0.0 ) {
+//			System.out.println("Q2");
+//		}
+//		else if( x < 0.0 && y < 0.0 ) {
+//			System.out.println("Q3");
+//		}
+//		else {
+//			System.out.println("Q4");
+//		}
+		
+//		Exercício 8
+//		Em um país imaginário denominado Lisarb, todos os habitantes ficam felizes em pagar seus impostos, pois sabem
+//		que nele não existem políticos corruptos e os recursos arrecadados são utilizados em benefício da população, sem
+//		qualquer desvio. A moeda deste país é o Rombus, cujo símbolo é o R$.
+//		Leia um valor com duas casas decimais, equivalente ao salário de uma pessoa de Lisarb. Em seguida, calcule e
+//		mostre o valor que esta pessoa deve pagar de Imposto de Renda, segundo a tabela abaixo.
+		
+//		Lembre que, se o salário for R$ 3002.00, a taxa que incide é de 8% apenas sobre R$ 1000.00, pois a faixa de
+//		salário que fica de R$ 0.00 até R$ 2000.00 é isenta de Imposto de Renda. No exemplo fornecido (abaixo), a taxa é
+//		de 8% sobre R$ 1000.00 + 18% sobre R$ 2.00, o que resulta em R$ 80.36 no total. O valor deve ser impresso com
+//		duas casas decimais.
+		
+		//tabela
+		System.out.println("\tRenda\t\t\t\tImposto de Renda\t\t");
+		System.out.println("-------------------------------------|---------------------");
+		System.out.println("\tde 0.00 a R$ 2000.00\t\t      Isento\t\t");
+		System.out.println("-------------------------------------|---------------------");
+		System.out.println("\tde R$ 2000.01 até R$ 3000.00\t\t8%\t\t");
+		System.out.println("-------------------------------------|---------------------");
+		System.out.println("\tde R$ 3000.01 até R$ 4500.00\t\t18%\t\t");
+		System.out.println("-------------------------------------|---------------------");
+		System.out.println("\tacima de R$ 4500.00\t\t\t28%\t\t");
+		System.out.println("-------------------------------------|---------------------");
+		
+		System.out.println("");//pula 1 linha
+		System.out.print("Digite o salário: R$ ");
+		double salario = scan.nextDouble();
+		double imposto;
+		if( salario <= 2000.0) {
+			imposto = 0.0;
+		}
+		else if( salario <= 3000.0 ) {
+			imposto = (salario-2000) * (8.0/100.0);
+		}
+		else if ( salario <= 4500.0 ) {
+			imposto = 1000 * (8.0/100.0);
+			imposto+= (salario - 3000) * (18.0/100.0);
+		}
+		else {
+			imposto  = 1000 * (8.0/100.0);
+			imposto += 1500 * (18.0/100.0);
+			imposto += (salario - 4500) * (28.0/100.0);
+		}
+		
+		if ( imposto == 0.0 ) 
+			System.out.println("Isento");
+		else
+			System.out.println("R$ " + String.format("%.2f", imposto));		
+		
+		scan.close();
+		
+		
+				
 
 
 	}
